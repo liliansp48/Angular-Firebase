@@ -5,13 +5,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Title Page</title>
+        <title>AngularJS with firebase</title>
 
         <!-- Bootstrap CSS -->
         <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
         <!--AngularJS-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <!--firebase-->
+        <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+        <!--JSLocal-->
         <script src="js\index-two.js"></script>
 
 
@@ -22,16 +25,17 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="container" ng-app="tarefasApp" ng-controller="tarefasCtrl">
+    <body class="container" ng-app="tarefasApp" ng-controller="tarefasCtrl" ng-init="inicializacao()">
         <h1 class="text-center text-danger">LISTA DE TAREFAS</h1>
         <br>
         <hr style="border: 1px solid #ccc">
         <br>
         <div class="row">
             <div class="col-xs-6 col-xs-offset-3 well">
-                <input type="text" class="form-control">
+                <p class="text-lowercase text-center" ng-show="tarefa != ''">Você está adicionando a tarefa <strong>{{tarefa}}</strong></p>
+                <input type="text" class="form-control" ng-model="tarefa">
                 <br>
-                <button type="button" class="btn btn-block btn-primary">
+                <button type="button" ng-click="Adicionar()" class="btn btn-block btn-primary">
                     Enviar Informações
                 </button>
                 <br>
@@ -49,6 +53,8 @@
         <script src="http://code.jquery.com/jquery.js"></script>
         <!-- Bootstrap JavaScript -->
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+
     </body>
 </html>
 
