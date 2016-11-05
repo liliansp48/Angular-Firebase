@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Angular js</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!--AngularJS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+        <script src="js\index-one.js"></script>
+        
+    </head>
+    <!--<body ng-app ng-init="PrimeiroNome = 'Meu'; SegundoNome= 'Nome';">
+        <h1 class="text-center">Hello AngularJS</h1>
+        <p>Primeiro Nome: <strong>{{PrimeiroNome}}</strong></p>
+        <p>Segundo Nome: <strong>{{SegundoNome}}</strong></p>
+    </body>-->
+
+    <body class="container" ng-app="bindingApp" ng-controller="BindingController">
+        <p>First Name: <strong>{{PrimeiroNome}}</strong></p>
+        <p>Middle Name: <strong>{{SegundoNome}}</strong></p>
+        <p>Last Name: <strong>{{TerceiroNome}}</strong></p>
+
+
+        <br>
+        <br>
+
+        <label for="">1º Nome<input type="text" ng-model="PrimeiroNome"></label>
+        <br>
+        <label for="">2º Nome<input type="text" ng-model="SegundoNome" ></label>
+        <br>
+        <label for="">3º Nome<input type="text" ng-model="TerceiroNome" ></label>
+    </body>
+</html>
