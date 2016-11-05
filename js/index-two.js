@@ -7,7 +7,7 @@ angular.module('tarefasApp', []).controller('tarefasCtrl',function  ($scope)
 
     $scope.Adicionar = function(){
         debugger;
-        bancoDados.push($scope.tarefa)
+        bancoDados.push({task:$scope.tarefa})
     }
 
     $scope.deletar = function (){
